@@ -1,0 +1,14 @@
+.header {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #EAEFF2;
+    padding: 22px 0px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 3fr 1fr;
+    margin-bottom: 20px;
+}
+
+.title {
+    grid-column-start: 2;
+}

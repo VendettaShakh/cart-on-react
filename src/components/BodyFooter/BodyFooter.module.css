@@ -1,0 +1,11 @@
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 3fr 1fr;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #EAEFF2;
+    padding: 22px 0px;
+}
+.total__count {
+    grid-column-start: 3;
+}
