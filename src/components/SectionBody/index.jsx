@@ -34,14 +34,14 @@ const SectionBody = () => {
   ]);
 
   const [total, setTotal] = useState({
-    price: cart.reduce((prev, acc) => { return prev + acc.priceTotal }, 0),
-    count: cart.reduce((prev, acc) => { return prev + acc.count }, 0)
+    price: cart.reduce((prev, acc) => prev + acc.priceTotal, 0),
+    count: cart.reduce((prev, acc) => prev + acc.count, 0)
   })
 
   useEffect(() => {
     setTotal({
-      price: cart.reduce((prev, acc) => { return prev + acc.priceTotal }, 0),
-      count: cart.reduce((prev, acc) => { return prev + acc.count }, 0)
+      price: cart.reduce((prev, acc) => prev + acc.priceTotal, 0),
+      count: cart.reduce((prev, acc) => prev + acc.count, 0)
     })
   }, [cart])
 

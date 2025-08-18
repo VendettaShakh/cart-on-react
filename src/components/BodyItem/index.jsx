@@ -2,6 +2,10 @@ import React from 'react'
 import styles from './BodyItem.module.css'
 
 const BodyItem = ({ id, title, img, priceTotal, count, deleteProduct, increase, decrease }) => {
+
+  const priceFormatter = new Intl.NumberFormat()
+
+
   return (
     <div>
       <div className={styles.body_item}>
@@ -14,7 +18,7 @@ const BodyItem = ({ id, title, img, priceTotal, count, deleteProduct, increase, 
             <img onClick={() => decrease(id, count)} className={styles.count__minus} src="images/down.svg" alt="down" />
           </div>
         </div>
-        <div className={styles.item__price}>{priceTotal} ₽</div>
+        <div className={styles.item__price}>{priceFormatter.format(priceTotal)} ₽</div>
         <img onClick={() => deleteProduct(id)} src='images/x.svg' alt='x' className={styles.item__remove} />
       </div>
     </div>
